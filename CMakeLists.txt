@@ -4,7 +4,7 @@ project(3D-Render)
 set(CMAKE_CXX_STANDARD 17)
 set(SFML_DIR "SFML-2.5.1/lib/cmake/SFML/")
 set(SFML_STATIC_LIBRARIES TRUE)
-#set(-DCMAKE_BUILD_TYPE Debug32)
+set(-DCMAKE_BUILD_TYPE x86-Debug)
 
 add_executable(3D-Render screen.cpp renderer.cpp test1.cpp application.cpp main.cpp)
 
