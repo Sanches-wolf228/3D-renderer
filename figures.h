@@ -1,16 +1,17 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+#include <glm.hpp>
 
 namespace Sanches_project {
 
 struct Point {
-	double coordinates[3];
+	glm::vec4 coordinates;
 };
 
 struct RasterPoint {
 	int x;
 	int y;
-	double z;
+	float z;
 };
 
 struct RasterTriangle {

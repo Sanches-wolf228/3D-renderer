@@ -14,8 +14,8 @@ int main()
 		camera.direction.near = 3;
 		camera.direction.far = 10;
 		camera.location = { 1, 2, 3 };
-		camera.calculate_view_matrix();
-		camera.calculate_perspective_matrix();
+		//camera.calculate_view_matrix();
+		//camera.calculate_perspective_matrix();
 	//pj::Test1::run_tests();
 	return 0;
 }

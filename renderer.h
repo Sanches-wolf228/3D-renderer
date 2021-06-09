@@ -9,28 +9,29 @@ namespace Sanches_project {
 class Renderer {
 public:
 
-	void draw(Triangle& source, RasterScreen* screen, Camera camera);
+	void draw(Triangle& source);
 
 private:
 
-	RasterTriangle discrete(const Triangle& source, RasterScreen* screen);
+		RasterScreen* screen;
 
-	void clipping(Triangle& source, Camera camera, std::vector<Triangle>& target);
+		Camera* camera;
 
-	void triangle_sort(RasterTriangle& source);
+		RasterTriangle discrete(const Triangle& source);
 
-	/**/void fast_rasterisation_cache(RasterScreen* screen, RasterPoint p1, RasterPoint p2,
-		std::vector<RasterPoint>& board, sf::Color color);
+		void clipping(Triangle& source, std::vector<Triangle>& target);
 
-	void fast_rasterisation(RasterScreen* screen, RasterPoint p1, RasterPoint p2, sf::Color color);
+		void triangle_sort(RasterTriangle& source);
 
-	void triangle_rasterisation(RasterScreen* screen, RasterTriangle source, sf::Color color);
+		void fast_rasterisation(RasterPoint p1, RasterPoint p2, sf::Color color);
 
-	/**/bool is_point_on_screen(RasterScreen* screen, RasterPoint source);
+		void triangle_rasterisation(RasterTriangle source, sf::Color color);
 
-	/**/bool is_triangle_on_screen(RasterScreen* screen, RasterTriangle source);
+		int height_calculate(const RasterPoint& p1, const RasterPoint& p2, int x);
 
-	double depth_calculate(const RasterPoint &p1, const RasterPoint &p2, int x, int y);
+		float depth_calculate(const RasterPoint& p1, const RasterPoint& p2, int x, int y);
+
+		void transfer_to_screen(Triangle& triangle);
 };
 
 }//namespace Sanches_project

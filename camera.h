@@ -11,7 +11,7 @@ constexpr glm::mat4 unit_matrix{
     {0, 0, 0, 1}
     };
 
-constexpr float pi = 3.14159;
+constexpr float pi = (float)3.1415925;
 
 
 struct CameraDirection {
