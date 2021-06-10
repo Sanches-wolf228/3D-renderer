@@ -1,5 +1,7 @@
 # render_buffer
 
+![image](https://user-images.githubusercontent.com/71072356/121495480-51f90c00-c9e2-11eb-8c5d-8f7f56ac3d8b.png)
+
 Как собрать проект?
 
 ![image](https://user-images.githubusercontent.com/71072356/120914669-46d37280-c6a8-11eb-8c3d-7e4c7667547e.png)
