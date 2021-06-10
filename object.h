@@ -2,16 +2,17 @@
 
 #include <vector>
 #include "figures.h"
-#include "camera.h"
 
 namespace Sanches_project {
 
 class Object {
+public:
+
     std::vector<Triangle> data;
 
-    //void transform(const Camera &cam);
-
     void move(glm::vec3 delta);
+
+    void homotetia(glm::vec3 base, float koef);
 };
 
 
